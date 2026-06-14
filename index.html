@@ -3,138 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurboMax - Taller Mecánico</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Alan - Servicios Técnicos y Mecánicos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navegación -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">🔧 TurboMax</div>
+        <div class="container">
+            <div class="logo">
+                <h1>⚙️ Alan</h1>
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#personal">Personal</a></li>
+                <li><a href="#qr">Acceso QR</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Encabezado Principal -->
-    <header class="hero" id="inicio">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Bienvenido a TurboMax</h1>
-            <p>Tu taller mecánico de confianza</p>
-            <a href="#contacto" class="btn btn-primary">¡Contáctanos!</a>
-        </div>
-    </header>
-
-    <!-- Sección de Servicios -->
-    <section class="servicios" id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicios-grid">
-            <div class="servicio-card">
-                <div class="servicio-icon">⚙️</div>
-                <h3>Mantenimiento General</h3>
-                <p>Cambio de aceite, filtros y revisión completa de tu vehículo</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">🛞</div>
-                <h3>Ruedas y Frenos</h3>
-                <p>Cambio, balanceo y alineación de ruedas, servicio de frenos</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">🔋</div>
-                <h3>Sistema Eléctrico</h3>
-                <p>Diagnóstico y reparación de batería, alternador y sistema eléctrico</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">💨</div>
-                <h3>Motor y Transmisión</h3>
-                <p>Reparación de motores, transmisión y sistemas de escape</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">🌡️</div>
-                <h3>Sistema de Refrigeración</h3>
-                <p>Revisión y reparación de radiador, termostato y circuito de enfriamiento</p>
-            </div>
-            <div class="servicio-card">
-                <div class="servicio-icon">🧴</div>
-                <h3>Lavado y Detallado</h3>
-                <p>Lavado profesional y detallado completo de tu vehículo</p>
-            </div>
+            <h1>Servicios Técnicos y Mecánicos de Confianza</h1>
+            <p>Soluciones profesionales para tus necesidades técnicas y mecánicas</p>
+            <button class="btn btn-primary" onclick="document.getElementById('qr').scrollIntoView({behavior: 'smooth'})">
+                Acceder con QR
+            </button>
         </div>
     </section>
 
-    <!-- Sección de Características -->
-    <section class="caracteristicas">
-        <h2>¿Por qué elegir TurboMax?</h2>
-        <div class="caracteristicas-grid">
-            <div class="caracteristica">
-                <span class="caracteristica-numero">1</span>
-                <h3>Técnicos Certificados</h3>
-                <p>Equipo de expertos con más de 15 años de experiencia</p>
-            </div>
-            <div class="caracteristica">
-                <span class="caracteristica-numero">2</span>
-                <h3>Repuestos Originales</h3>
-                <p>Garantizamos la calidad con piezas auténticas</p>
-            </div>
-            <div class="caracteristica">
-                <span class="caracteristica-numero">3</span>
-                <h3>Precios Competitivos</h3>
-                <p>Las mejores tarifas sin comprometer la calidad</p>
-            </div>
-            <div class="caracteristica">
-                <span class="caracteristica-numero">4</span>
-                <h3>Garantía 100%</h3>
-                <p>Garantía en todos nuestros trabajos realizados</p>
-            </div>
-        </div>
-    </section>
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            
+            <div class="servicios-grid">
+                <!-- Servicios Técnicos -->
+                <div class="categoria-servicios">
+                    <h3>🔧 Servicios Técnicos</h3>
+                    
+                    <div class="servicio-card">
+                        <h4>Reparación de Computadoras</h4>
+                        <p class="descripcion">Diagnóstico y reparación de hardware y software</p>
+                        <p class="precio">$45 - $150</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Instalación de Software</h4>
+                        <p class="descripcion">Instalación y configuración de programas</p>
+                        <p class="precio">$30 - $80</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Mantenimiento Preventivo</h4>
+                        <p class="descripcion">Limpieza, actualización y optimización</p>
+                        <p class="precio">$60 - $120</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Recuperación de Datos</h4>
+                        <p class="descripcion">Recuperación de información perdida</p>
+                        <p class="precio">$100 - $300</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Instalación de Red</h4>
+                        <p class="descripcion">Configuración de redes y conectividad</p>
+                        <p class="precio">$80 - $200</p>
+                    </div>
 
-    <!-- Sección de Horario -->
-    <section class="horario">
-        <h2>Nuestro Horario de Atención</h2>
-        <div class="horario-info">
-            <div class="horario-item">
-                <strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM
-            </div>
-            <div class="horario-item">
-                <strong>Sábados:</strong> 9:00 AM - 4:00 PM
-            </div>
-            <div class="horario-item">
-                <strong>Domingos:</strong> Cerrado
-            </div>
-        </div>
-    </section>
+                    <div class="servicio-card">
+                        <h4>Soporte Remoto 24/7</h4>
+                        <p class="descripcion">Asistencia técnica en línea sin costo adicional</p>
+                        <p class="precio">$150/mes</p>
+                    </div>
+                </div>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto" id="contacto">
-        <h2>Contáctanos</h2>
-        <div class="contacto-container">
-            <form class="formulario" action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu correo" required>
-                <textarea placeholder="Describa el problema de su vehículo" rows="5" required></textarea>
-                <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
-            </form>
-            <div class="contacto-info">
-                <h3>Información de Contacto</h3>
-                <p><strong>📍 Dirección:</strong> Calle Principal 123, Centro</p>
-                <p><strong>📞 Teléfono:</strong> (555) 123-4567</p>
-                <p><strong>📧 Email:</strong> info@turbomax.com</p>
-                <div class="redes-sociales">
-                    <a href="#" class="red-social">Facebook</a>
-                    <a href="#" class="red-social">Instagram</a>
-                    <a href="#" class="red-social">WhatsApp</a>
+                <!-- Servicios Mecánicos -->
+                <div class="categoria-servicios">
+                    <h3>⚙️ Servicios Mecánicos</h3>
+                    
+                    <div class="servicio-card">
+                        <h4>Cambio de Aceite</h4>
+                        <p class="descripcion">Cambio de aceite y filtro</p>
+                        <p class="precio">$35 - $65</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Reparación de Frenos</h4>
+                        <p class="descripcion">Inspección y reparación del sistema de frenos</p>
+                        <p class="precio">$80 - $250</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Alineación y Balanceo</h4>
+                        <p class="descripcion">Alineación de ruedas y balanceo de llantas</p>
+                        <p class="precio">$50 - $120</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Cambio de Batería</h4>
+                        <p class="descripcion">Reemplazo de batería de vehículo</p>
+                        <p class="precio">$80 - $180</p>
+                    </div>
+                    
+                    <div class="servicio-card">
+                        <h4>Reparación de Motor</h4>
+                        <p class="descripcion">Diagnóstico y reparación de motor</p>
+                        <p class="precio">$150 - $500</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <h4>Inspección Técnica</h4>
+                        <p class="descripcion">Inspección completa del vehículo</p>
+                        <p class="precio">$40 - $100</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pie de Página -->
+    <!-- Personal Section -->
+    <section id="personal" class="personal">
+        <div class="container">
+            <h2>Nuestro Personal Técnico</h2>
+            <div class="personal-grid">
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech1" alt="Técnico">
+                    <h3>Carlos García</h3>
+                    <p class="rol">Técnico Informático Senior</p>
+                    <p class="exp">8 años de experiencia</p>
+                </div>
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech2" alt="Técnico">
+                    <h3>Juan Martínez</h3>
+                    <p class="rol">Especialista en Reparación</p>
+                    <p class="exp">10 años de experiencia</p>
+                </div>
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech1" alt="Mecánico">
+                    <h3>Roberto López</h3>
+                    <p class="rol">Mecánico Automotriz</p>
+                    <p class="exp">12 años de experiencia</p>
+                </div>
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech2" alt="Mecánico">
+                    <h3>Miguel Rodríguez</h3>
+                    <p class="rol">Mecánico Especializado</p>
+                    <p class="exp">9 años de experiencia</p>
+                </div>
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech3" alt="Técnico">
+                    <h3>Andrea Sánchez</h3>
+                    <p class="rol">Técnica de Soporte</p>
+                    <p class="exp">6 años de experiencia</p>
+                </div>
+                <div class="personal-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech3" alt="Mecánico">
+                    <h3>Francisco Díaz</h3>
+                    <p class="rol">Mecánico General</p>
+                    <p class="exp">11 años de experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Access Section -->
+    <section id="qr" class="qr-section">
+        <div class="container">
+            <h2>Acceso Rápido con QR</h2>
+            <div class="qr-container">
+                <div class="qr-box">
+                    <h3>Escanea para Agendar Cita</h3>
+                    <div class="qr-placeholder">
+                        <svg viewBox="0 0 200 200">
+                            <rect x="10" y="10" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="130" y="10" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="10" y="130" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="50" y="50" width="20" height="20" fill="white"/>
+                            <rect x="130" y="50" width="20" height="20" fill="white"/>
+                            <rect x="50" y="130" width="20" height="20" fill="white"/>
+                            <rect x="80" y="80" width="40" height="40" fill="none" stroke="#2c3e50" stroke-width="3"/>
+                            <circle cx="100" cy="100" r="5" fill="#2c3e50"/>
+                            <rect x="150" y="100" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
+                            <rect x="80" y="150" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <p class="qr-info">Accede a nuestro sistema de reservas</p>
+                </div>
+                <div class="qr-box">
+                    <h3>Escanea para Ver Catálogo</h3>
+                    <div class="qr-placeholder">
+                        <svg viewBox="0 0 200 200">
+                            <rect x="10" y="10" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="130" y="10" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="10" y="130" width="60" height="60" fill="#2c3e50"/>
+                            <rect x="50" y="50" width="20" height="20" fill="white"/>
+                            <rect x="130" y="50" width="20" height="20" fill="white"/>
+                            <rect x="50" y="130" width="20" height="20" fill="white"/>
+                            <rect x="80" y="80" width="40" height="40" fill="none" stroke="#2c3e50" stroke-width="3"/>
+                            <circle cx="100" cy="100" r="5" fill="#2c3e50"/>
+                            <rect x="150" y="100" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
+                            <rect x="80" y="150" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <p class="qr-info">Consulta todos nuestros servicios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contacto-info">
+                <div class="info-item">
+                    <h4>📞 Teléfono</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <h4>📧 Email</h4>
+                    <p>info@alan-servicios.com</p>
+                </div>
+                <div class="info-item">
+                    <h4>📍 Ubicación</h4>
+                    <p>Calle Principal 123, Ciudad</p>
+                </div>
+                <div class="info-item">
+                    <h4>🕒 Horarios</h4>
+                    <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>
+                       Sábado: 9:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 TurboMax Taller Mecánico. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Alan - Servicios Técnicos y Mecánicos. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
