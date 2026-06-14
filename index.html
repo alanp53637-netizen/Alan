@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan - Servicios Técnicos y Mecánicos</title>
+    <title>Alan - Servicios Técnicos y Mecánicos Profesionales</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -12,12 +13,14 @@
         <div class="container">
             <div class="logo">
                 <h1>⚙️ Alan</h1>
+                <p class="tagline">Servicios Técnicos Profesionales</p>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#personal">Personal</a></li>
-                <li><a href="#qr">Acceso QR</a></li>
+                <li><a href="#qr">Agendar Cita</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -27,9 +30,23 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Servicios Técnicos y Mecánicos de Confianza</h1>
-            <p>Soluciones profesionales para tus necesidades técnicas y mecánicas</p>
+            <p>Soluciones profesionales con más de 15 años de experiencia en el mercado</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Clientes Satisfechos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">Calificación Promedio</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Soporte Disponible</span>
+                </div>
+            </div>
             <button class="btn btn-primary" onclick="document.getElementById('qr').scrollIntoView({behavior: 'smooth'})">
-                Acceder con QR
+                Agendar Cita Ahora
             </button>
         </div>
     </section>
@@ -38,87 +55,146 @@
     <section id="servicios" class="servicios">
         <div class="container">
             <h2>Nuestros Servicios</h2>
+            <p class="section-subtitle">Contamos con un amplio catálogo de servicios profesionales</p>
             
             <div class="servicios-grid">
                 <!-- Servicios Técnicos -->
                 <div class="categoria-servicios">
-                    <h3>🔧 Servicios Técnicos</h3>
+                    <h3>🔧 Servicios Técnicos Informáticos</h3>
+                    <p class="categoria-descripcion">Reparación y mantenimiento de computadoras, laptops y sistemas</p>
                     
                     <div class="servicio-card">
+                        <div class="servicio-icon">💻</div>
                         <h4>Reparación de Computadoras</h4>
-                        <p class="descripcion">Diagnóstico y reparación de hardware y software</p>
+                        <p class="descripcion">Diagnóstico y reparación de hardware, drivers y software. Incluye virus y malware</p>
                         <p class="precio">$45 - $150</p>
+                        <p class="tiempo">⏱️ 1-2 horas</p>
                     </div>
                     
                     <div class="servicio-card">
+                        <div class="servicio-icon">📦</div>
                         <h4>Instalación de Software</h4>
-                        <p class="descripcion">Instalación y configuración de programas</p>
+                        <p class="descripcion">Instalación, configuración y optimización de programas profesionales</p>
                         <p class="precio">$30 - $80</p>
+                        <p class="tiempo">⏱️ 30 min - 1 hora</p>
                     </div>
                     
                     <div class="servicio-card">
+                        <div class="servicio-icon">🧹</div>
                         <h4>Mantenimiento Preventivo</h4>
-                        <p class="descripcion">Limpieza, actualización y optimización</p>
+                        <p class="descripcion">Limpieza profunda, actualización de drivers, optimización de sistema</p>
                         <p class="precio">$60 - $120</p>
+                        <p class="tiempo">⏱️ 2-3 horas</p>
                     </div>
                     
                     <div class="servicio-card">
+                        <div class="servicio-icon">💾</div>
                         <h4>Recuperación de Datos</h4>
-                        <p class="descripcion">Recuperación de información perdida</p>
+                        <p class="descripcion">Recuperación de información perdida de discos duros, pendrives y SD</p>
                         <p class="precio">$100 - $300</p>
+                        <p class="tiempo">⏱️ Consultar</p>
                     </div>
                     
                     <div class="servicio-card">
-                        <h4>Instalación de Red</h4>
-                        <p class="descripcion">Configuración de redes y conectividad</p>
+                        <div class="servicio-icon">🌐</div>
+                        <h4>Instalación y Configuración de Redes</h4>
+                        <p class="descripcion">Setup de Wi-Fi, redes LAN/WAN, cableado estructurado</p>
                         <p class="precio">$80 - $200</p>
+                        <p class="tiempo">⏱️ 2-4 horas</p>
                     </div>
 
                     <div class="servicio-card">
+                        <div class="servicio-icon">📞</div>
                         <h4>Soporte Remoto 24/7</h4>
-                        <p class="descripcion">Asistencia técnica en línea sin costo adicional</p>
-                        <p class="precio">$150/mes</p>
+                        <p class="descripcion">Asistencia técnica en línea, resolución de problemas inmediata</p>
+                        <p class="precio">$150/mes o $30/consulta</p>
+                        <p class="tiempo">⏱️ Inmediato</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">🔒</div>
+                        <h4>Seguridad y Antivirus</h4>
+                        <p class="descripcion">Instalación de antivirus, eliminación de malware, seguridad avanzada</p>
+                        <p class="precio">$50 - $100</p>
+                        <p class="tiempo">⏱️ 1-2 horas</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">⚡</div>
+                        <h4>Upgrade de Hardware</h4>
+                        <p class="descripcion">Instalación de RAM, SSD, procesadores y otros componentes</p>
+                        <p class="precio">$40 - $180</p>
+                        <p class="tiempo">⏱️ 1-2 horas</p>
                     </div>
                 </div>
 
                 <!-- Servicios Mecánicos -->
                 <div class="categoria-servicios">
-                    <h3>⚙️ Servicios Mecánicos</h3>
+                    <h3>⚙️ Servicios Mecánicos Automotrices</h3>
+                    <p class="categoria-descripcion">Mantenimiento y reparación de vehículos a gasóleo y gasolina</p>
                     
                     <div class="servicio-card">
-                        <h4>Cambio de Aceite</h4>
-                        <p class="descripcion">Cambio de aceite y filtro</p>
+                        <div class="servicio-icon">🛢️</div>
+                        <h4>Cambio de Aceite y Filtros</h4>
+                        <p class="descripcion">Cambio completo de aceite, filtro de aire y filtro de combustible</p>
                         <p class="precio">$35 - $65</p>
+                        <p class="tiempo">⏱️ 30 - 45 min</p>
                     </div>
                     
                     <div class="servicio-card">
-                        <h4>Reparación de Frenos</h4>
-                        <p class="descripcion">Inspección y reparación del sistema de frenos</p>
+                        <div class="servicio-icon">🛑</div>
+                        <h4>Reparación y Mantenimiento de Frenos</h4>
+                        <p class="descripcion">Inspección, cambio de pastillas, discos y reparación del sistema</p>
                         <p class="precio">$80 - $250</p>
+                        <p class="tiempo">⏱️ 1-2 horas</p>
                     </div>
                     
                     <div class="servicio-card">
-                        <h4>Alineación y Balanceo</h4>
-                        <p class="descripcion">Alineación de ruedas y balanceo de llantas</p>
+                        <div class="servicio-icon">🛞</div>
+                        <h4>Alineación, Balanceo y Rotación de Ruedas</h4>
+                        <p class="descripcion">Alineación 4 ruedas, balanceo dinámico y rotación completa</p>
                         <p class="precio">$50 - $120</p>
+                        <p class="tiempo">⏱️ 1 - 1.5 horas</p>
                     </div>
                     
                     <div class="servicio-card">
+                        <div class="servicio-icon">🔋</div>
                         <h4>Cambio de Batería</h4>
-                        <p class="descripcion">Reemplazo de batería de vehículo</p>
+                        <p class="descripcion">Reemplazo de batería con garantía, prueba del sistema eléctrico</p>
                         <p class="precio">$80 - $180</p>
+                        <p class="tiempo">⏱️ 20 - 30 min</p>
                     </div>
                     
                     <div class="servicio-card">
-                        <h4>Reparación de Motor</h4>
-                        <p class="descripcion">Diagnóstico y reparación de motor</p>
+                        <div class="servicio-icon">⚙️</div>
+                        <h4>Reparación y Diagnóstico de Motor</h4>
+                        <p class="descripcion">Escaneo de motor, diagnóstico completo, reparación especializada</p>
                         <p class="precio">$150 - $500</p>
+                        <p class="tiempo">⏱️ 2-4 horas</p>
                     </div>
 
                     <div class="servicio-card">
-                        <h4>Inspección Técnica</h4>
-                        <p class="descripcion">Inspección completa del vehículo</p>
+                        <div class="servicio-icon">🔍</div>
+                        <h4>Inspección Técnica Completa</h4>
+                        <p class="descripcion">Revisión de todos los sistemas del vehículo, reporte detallado</p>
                         <p class="precio">$40 - $100</p>
+                        <p class="tiempo">⏱️ 1 - 1.5 horas</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">💨</div>
+                        <h4>Servicio de Transmisión y Escape</h4>
+                        <p class="descripcion">Cambio de líquido de transmisión, reparación de escape</p>
+                        <p class="precio">$100 - $250</p>
+                        <p class="tiempo">⏱️ 1-3 horas</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">❄️</div>
+                        <h4>Servicio de Aire Acondicionado</h4>
+                        <p class="descripcion">Recarga de refrigerante, limpieza y reparación del sistema</p>
+                        <p class="precio">$60 - $150</p>
+                        <p class="tiempo">⏱️ 1 - 2 horas</p>
                     </div>
                 </div>
             </div>
@@ -128,43 +204,56 @@
     <!-- Personal Section -->
     <section id="personal" class="personal">
         <div class="container">
-            <h2>Nuestro Personal Técnico</h2>
+            <h2>Nuestro Equipo Profesional</h2>
+            <p class="section-subtitle">Técnicos certificados con años de experiencia</p>
             <div class="personal-grid">
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech1" alt="Técnico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos&backgroundColor=b6e3f5&top=longHair&accessories=glasses" alt="Carlos García">
                     <h3>Carlos García</h3>
-                    <p class="rol">Técnico Informático Senior</p>
-                    <p class="exp">8 años de experiencia</p>
+                    <p class="rol">🏆 Técnico Informático Senior</p>
+                    <p class="especialidad">Especialista en Reparación y Diagnóstico</p>
+                    <p class="exp">8+ años de experiencia</p>
+                    <p class="certificado">✓ Certificado en A+, Network+</p>
                 </div>
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech2" alt="Técnico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Juan&backgroundColor=ffd89b&top=hat&accessories=sunglasses" alt="Juan Martínez">
                     <h3>Juan Martínez</h3>
-                    <p class="rol">Especialista en Reparación</p>
-                    <p class="exp">10 años de experiencia</p>
+                    <p class="rol">🔧 Especialista en Reparación</p>
+                    <p class="especialidad">Experto en Hardware y Redes</p>
+                    <p class="exp">10+ años de experiencia</p>
+                    <p class="certificado">✓ Técnico Certificado CCNA</p>
                 </div>
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech1" alt="Mecánico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Roberto&backgroundColor=b1dfa6&top=shortHair&accessories=sunglasses" alt="Roberto López">
                     <h3>Roberto López</h3>
-                    <p class="rol">Mecánico Automotriz</p>
-                    <p class="exp">12 años de experiencia</p>
+                    <p class="rol">⚙️ Mecánico Automotriz Senior</p>
+                    <p class="especialidad">Especialista en Motores</p>
+                    <p class="exp">12+ años de experiencia</p>
+                    <p class="certificado">✓ Mecánico Certificado ASE</p>
                 </div>
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech2" alt="Mecánico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Miguel&backgroundColor=d4a5d4&top=turban&accessories=prescription02" alt="Miguel Rodríguez">
                     <h3>Miguel Rodríguez</h3>
-                    <p class="rol">Mecánico Especializado</p>
-                    <p class="exp">9 años de experiencia</p>
+                    <p class="rol">🚗 Mecánico Especializado</p>
+                    <p class="especialidad">Experto en Sistemas Eléctricos</p>
+                    <p class="exp">9+ años de experiencia</p>
+                    <p class="certificado">✓ Técnico en Electricidad Automotriz</p>
                 </div>
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tech3" alt="Técnico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Andrea&backgroundColor=fdbcb4&top=longHair&accessories=earrings" alt="Andrea Sánchez">
                     <h3>Andrea Sánchez</h3>
-                    <p class="rol">Técnica de Soporte</p>
-                    <p class="exp">6 años de experiencia</p>
+                    <p class="rol">📱 Técnica de Soporte IT</p>
+                    <p class="especialidad">Especialista en Atención al Cliente</p>
+                    <p class="exp">6+ años de experiencia</p>
+                    <p class="certificado">✓ Soporte Técnico Certificado</p>
                 </div>
                 <div class="personal-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=mech3" alt="Mecánico">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Francisco&backgroundColor=ffccb2&top=shortHair&accessories=sunglasses" alt="Francisco Díaz">
                     <h3>Francisco Díaz</h3>
-                    <p class="rol">Mecánico General</p>
-                    <p class="exp">11 años de experiencia</p>
+                    <p class="rol">🔨 Mecánico General</p>
+                    <p class="especialidad">Experto en Mantenimiento Preventivo</p>
+                    <p class="exp">11+ años de experiencia</p>
+                    <p class="certificado">✓ Mecánico Polivalente Certificado</p>
                 </div>
             </div>
         </div>
@@ -173,43 +262,102 @@
     <!-- QR Access Section -->
     <section id="qr" class="qr-section">
         <div class="container">
-            <h2>Acceso Rápido con QR</h2>
+            <h2>Agendar Tu Cita Ahora</h2>
+            <p class="section-subtitle">Escanea los códigos QR con tu smartphone</p>
             <div class="qr-container">
                 <div class="qr-box">
-                    <h3>Escanea para Agendar Cita</h3>
-                    <div class="qr-placeholder">
-                        <svg viewBox="0 0 200 200">
-                            <rect x="10" y="10" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="130" y="10" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="10" y="130" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="50" y="50" width="20" height="20" fill="white"/>
-                            <rect x="130" y="50" width="20" height="20" fill="white"/>
-                            <rect x="50" y="130" width="20" height="20" fill="white"/>
-                            <rect x="80" y="80" width="40" height="40" fill="none" stroke="#2c3e50" stroke-width="3"/>
-                            <circle cx="100" cy="100" r="5" fill="#2c3e50"/>
-                            <rect x="150" y="100" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
-                            <rect x="80" y="150" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    <p class="qr-info">Accede a nuestro sistema de reservas</p>
+                    <h3>📱 Sistema de Reservas Online</h3>
+                    <div id="qrcode1" class="qr-code"></div>
+                    <p class="qr-info">Accede a nuestro sistema de reservas en línea</p>
+                    <p class="qr-url">https://alan-servicios.com/reservar</p>
                 </div>
                 <div class="qr-box">
-                    <h3>Escanea para Ver Catálogo</h3>
-                    <div class="qr-placeholder">
-                        <svg viewBox="0 0 200 200">
-                            <rect x="10" y="10" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="130" y="10" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="10" y="130" width="60" height="60" fill="#2c3e50"/>
-                            <rect x="50" y="50" width="20" height="20" fill="white"/>
-                            <rect x="130" y="50" width="20" height="20" fill="white"/>
-                            <rect x="50" y="130" width="20" height="20" fill="white"/>
-                            <rect x="80" y="80" width="40" height="40" fill="none" stroke="#2c3e50" stroke-width="3"/>
-                            <circle cx="100" cy="100" r="5" fill="#2c3e50"/>
-                            <rect x="150" y="100" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
-                            <rect x="80" y="150" width="40" height="40" fill="#2c3e50" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    <p class="qr-info">Consulta todos nuestros servicios</p>
+                    <h3>📞 Contacto Directo WhatsApp</h3>
+                    <div id="qrcode2" class="qr-code"></div>
+                    <p class="qr-info">Comunícate con nosotros por WhatsApp</p>
+                    <p class="qr-url">https://wa.me/555123456</p>
+                </div>
+                <div class="qr-box">
+                    <h3>📋 Catálogo de Servicios</h3>
+                    <div id="qrcode3" class="qr-code"></div>
+                    <p class="qr-info">Descarga nuestro catálogo completo</p>
+                    <p class="qr-url">https://alan-servicios.com/catalogo</p>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <a href="tel:+15551234567" class="btn btn-secondary">📞 Llamar Ahora</a>
+                <a href="https://wa.me/555123456" class="btn btn-secondary">💬 WhatsApp</a>
+                <a href="mailto:info@alan-servicios.com" class="btn btn-secondary">📧 Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <h2>Testimonios de Clientes</h2>
+            <p class="section-subtitle">Lo que nuestros clientes dicen de nuestro servicio</p>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"Excelente servicio, muy profesionales y puntuales. Mi computadora quedó como nueva. Recomiendo ampliamente."</p>
+                    <p class="testimonio-autor">- María González</p>
+                    <p class="testimonio-fecha">Hace 2 semanas</p>
+                </div>
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"Repararon mi vehículo rápidamente y con muy buen precio. El equipo es muy competente y amable."</p>
+                    <p class="testimonio-autor">- Juan Pérez</p>
+                    <p class="testimonio-fecha">Hace 1 mes</p>
+                </div>
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"Llevo 5 años siendo cliente. Nunca defrauda, siempre trabajo de calidad y garantizado. Son los mejores."</p>
+                    <p class="testimonio-autor">- Carlos Rodríguez</p>
+                    <p class="testimonio-fecha">Hace 3 días</p>
+                </div>
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"El soporte remoto es increíble, resuelven problemas en minutos. No tengo palabras de gratitud."</p>
+                    <p class="testimonio-autor">- Patricia López</p>
+                    <p class="testimonio-fecha">Hace 1 semana</p>
+                </div>
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"Profesionales, confiables y con buenos precios. Definitivamente vuelvo a llamarlos cuando lo necesite."</p>
+                    <p class="testimonio-autor">- Roberto Martínez</p>
+                    <p class="testimonio-fecha">Hace 2 semanas</p>
+                </div>
+                <div class="testimonio-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-texto">"Mi laptop estaba lenta y no funcionaba bien. Los chicos de Alan la optimizaron perfectamente."</p>
+                    <p class="testimonio-autor">- Ana Sánchez</p>
+                    <p class="testimonio-fecha">Hace 10 días</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantía Section -->
+    <section class="garantia">
+        <div class="container">
+            <h2>Nuestras Garantías</h2>
+            <div class="garantia-grid">
+                <div class="garantia-card">
+                    <h3>✅ Garantía de Servicio</h3>
+                    <p>100% de garantía en todos nuestros trabajos. Si no queda satisfecho, lo hacemos de nuevo.</p>
+                </div>
+                <div class="garantia-card">
+                    <h3>💰 Mejor Precio Garantizado</h3>
+                    <p>Si encuentras un precio menor, lo igualamos. Tu satisfacción es nuestra prioridad.</p>
+                </div>
+                <div class="garantia-card">
+                    <h3>⏱️ Servicio Rápido</h3>
+                    <p>Trabajamos con eficiencia. Máximo 24 horas para la mayoría de reparaciones.</p>
+                </div>
+                <div class="garantia-card">
+                    <h3>🔒 Confidencialidad</h3>
+                    <p>Tus datos personales son seguros con nosotros. Utilizamos protección de datos avanzada.</p>
                 </div>
             </div>
         </div>
@@ -218,34 +366,145 @@
     <!-- Contacto Section -->
     <section id="contacto" class="contacto">
         <div class="container">
-            <h2>Contacto</h2>
-            <div class="contacto-info">
-                <div class="info-item">
-                    <h4>📞 Teléfono</h4>
-                    <p>+1 (555) 123-4567</p>
+            <h2>Contacto e Información</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información General</h3>
+                    <div class="info-item">
+                        <h4>📞 Teléfono</h4>
+                        <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📧 Email</h4>
+                        <p><a href="mailto:info@alan-servicios.com">info@alan-servicios.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📍 Ubicación</h4>
+                        <p>Calle Principal 123, Centro de la Ciudad<br>
+                           Próximo al Centro Comercial Downtown</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🕒 Horarios de Atención</h4>
+                        <p><strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM<br>
+                           <strong>Sábado:</strong> 9:00 AM - 2:00 PM<br>
+                           <strong>Domingo:</strong> Cerrado<br>
+                           <strong>Emergencias:</strong> 24/7 (llamar)</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>💬 Redes Sociales</h4>
+                        <div class="redes-sociales">
+                            <a href="#" class="red-social">Facebook</a>
+                            <a href="#" class="red-social">Instagram</a>
+                            <a href="#" class="red-social">Twitter</a>
+                            <a href="#" class="red-social">LinkedIn</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h4>📧 Email</h4>
-                    <p>info@alan-servicios.com</p>
+                <div class="contacto-form">
+                    <h3>Formulario de Contacto</h3>
+                    <form class="form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Tu teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="tecnico">Servicio Técnico</option>
+                                <option value="mecanico">Servicio Mecánico</option>
+                                <option value="consulta">Consulta General</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Describe tu problema o solicitud" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
                 </div>
-                <div class="info-item">
-                    <h4>📍 Ubicación</h4>
-                    <p>Calle Principal 123, Ciudad</p>
-                </div>
-                <div class="info-item">
-                    <h4>🕒 Horarios</h4>
-                    <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>
-                       Sábado: 9:00 AM - 2:00 PM</p>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación Section -->
+    <section class="ubicacion">
+        <div class="container">
+            <h2>Nuestra Ubicación</h2>
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00601!3d40.7127837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a28cf1e47ab%3A0x40c6a5e4b1e1b1b1!2s123%20Main%20St!5e0!3m2!1ses!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Alan - Servicios Técnicos y Mecánicos. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre Alan</h4>
+                    <p>Somos una empresa líder en servicios técnicos e mecánicos con más de 15 años de experiencia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Servicios Técnicos</a></li>
+                        <li><a href="#servicios">Servicios Mecánicos</a></li>
+                        <li><a href="#servicios">Soporte 24/7</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#personal">Nuestro Equipo</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Garantía</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alan - Servicios Técnicos y Mecánicos Profesionales. Todos los derechos reservados. | RUC: 20123456789</p>
+            </div>
+        </div>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        // Generar QR Codes
+        new QRCode(document.getElementById("qrcode1"), {
+            text: "https://alan-servicios.com/reservar",
+            width: 200,
+            height: 200,
+            colorDark: "#2c3e50",
+            colorLight: "#ffffff",
+        });
+
+        new QRCode(document.getElementById("qrcode2"), {
+            text: "https://wa.me/555123456",
+            width: 200,
+            height: 200,
+            colorDark: "#2c3e50",
+            colorLight: "#ffffff",
+        });
+
+        new QRCode(document.getElementById("qrcode3"), {
+            text: "https://alan-servicios.com/catalogo",
+            width: 200,
+            height: 200,
+            colorDark: "#2c3e50",
+            colorLight: "#ffffff",
+        });
+    </script>
 </body>
 </html>
